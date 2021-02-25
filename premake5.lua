@@ -26,7 +26,7 @@ project "AudioEngine"
 		"%{prj.name}/vendor/OpenAL-Soft/src/common"
 	}
 
-	liks
+	links
 	{
 		"OpenAL-Soft"
 	}
