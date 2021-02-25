@@ -22,8 +22,9 @@ project "AudioEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/OpenAL-Soft/include",
-		"%{prj.name}/vendor/OpenAL-Soft/src",
-		"%{prj.name}/vendor/OpenAL-Soft/src/common"
+		"%{prj.name}/vendor/OpenAL-Soft/al",
+		"%{prj.name}/vendor/OpenAL-Soft/alc",
+		"%{prj.name}/vendor/OpenAL-Soft/common"
 	}
 
 	links
