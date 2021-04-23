@@ -1,0 +1,3 @@
+[submodule "vendor/OpenAL-Soft"]
+	path = vendor/OpenAL-Soft
+	url = https://github.com/ZotyDev/openal-soft
