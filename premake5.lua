@@ -1,7 +1,6 @@
 project "AudioEngine"
-	kind "StaticLib"
+	kind "SharedLib"
 	language "C++"
-	cppdialect "C++17"
 
 	targetdir "bin/%{cfg.buildcfg}/%{prj.name}"
 	objdir "bin-int/%{cfg.buildcfg}/%{prj.name}"
@@ -33,7 +32,13 @@ project "AudioEngine"
 	}
 
 	filter "system:windows"
+		cppdialect "C++17"
 		systemversion "latest"
+
+		postbuildcommands
+		{
+			"{COPY} %{cfg.buildtarget.relpath} ../bin/%{cfg.buildcgf}/VoxelGame"
+		}
 
 	filter "configurations:Debug"
 		defines "UE_DEBUG"
